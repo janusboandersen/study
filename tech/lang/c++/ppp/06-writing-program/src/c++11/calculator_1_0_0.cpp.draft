@@ -1,0 +1,28 @@
+// Styleguide: https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md
+// Name of program: Calculator
+// Purpose of program: Calculate expressions from stdin
+// Author: Adapted from PPP book
+// Version and date: 1.0.0
+// General design ideas: Read tokens and parse expression using a grammar
+// Source code organization: Utilizes the book's std_lib..
+// Assumptions: 
+// To Do and missing pieces: 
+
+#include "std_lib_facilities.h"
+
+int main(int argc, char* argv[]) 
+{
+    try {
+        while (cin)
+            cout << expression() << '\n';
+    }
+    catch (exception& e) {
+        cerr << e.what() << '\n';
+        return 1;
+    }
+    catch (...) {
+        cerr << "exception \n";
+        return 2;
+    }
+    return 0;
+}
